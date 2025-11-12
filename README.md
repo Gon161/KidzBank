@@ -95,6 +95,7 @@ Este proyecto fue desarrollado por:
 
 - **Ing. Neri Alvarez** – Desarrollo, arquitectura del sistema y diseño funcional de la aplicación.
 - **Lic. Ana Itzel Mendez** – Propuesta conceptual inicial y orientación pedagógica del proyecto.
+- **Mtra. Lesly Alvarez** - Consultora 
 
 ## 📄 Licencia
 

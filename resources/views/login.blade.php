@@ -182,17 +182,17 @@
 
             <form>
                 <div class="mb-3">
-                    <label class="form-label">Username</label>
+                    <label class="form-label">Usuairo:</label>
                     <div class="position-relative">
-                        <input type="text" class="form-control" placeholder="Enter username">
+                        <input type="text" class="form-control" placeholder="Ingresar Usuario">
                         <i class="fas fa-user input-icon"></i>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
+                    <label class="form-label">Contraseña</label>
                     <div class="position-relative">
-                        <input type="password" class="form-control" placeholder="Enter password">
+                        <input type="password" class="form-control" placeholder="Ingresa Contraseña">
                         <i class="fas fa-lock input-icon"></i>
                     </div>
                 </div>
@@ -204,19 +204,19 @@
                             Remember me
                         </label>
                     </div>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <button type="submit" class="btn btn-login">Login</button>
 
                 <div class="register-link">
-                    Don't have an account? <a href="#">Register</a>
+                    Don't have an account? <a href="{{route('registro')}}">Register</a>
                 </div>
             </form>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="assets/particles/particles.min.js"></script>
 
     <script>
         // Particles.js Snow Configuration
