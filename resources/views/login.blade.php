@@ -43,8 +43,7 @@
             }
 
             .login-card {
-                background: rgba(139, 77, 184, 0.25);
-                backdrop-filter: blur(10px);
+                backdrop-filter: blur(0.5vh);
                 border: 1px solid rgba(255, 255, 255, 0.2);
                 border-radius: 20px;
                 padding: 40px 35px;
@@ -178,13 +177,13 @@
 
     <div class="login-container">
         <div class="login-card">
-            <h2 class="login-title">Login</h2>
+            <h2 class="login-title">Iniciar Sesión</h2>
 
             <form>
                 <div class="mb-3">
                     <label class="form-label">Usuairo:</label>
                     <div class="position-relative">
-                        <input type="text" class="form-control" placeholder="Ingresar Usuario">
+                        <input type="text" class="form-control" placeholder="Ingresa tu usuario">
                         <i class="fas fa-user input-icon"></i>
                     </div>
                 </div>
@@ -192,7 +191,7 @@
                 <div class="mb-3">
                     <label class="form-label">Contraseña</label>
                     <div class="position-relative">
-                        <input type="password" class="form-control" placeholder="Ingresa Contraseña">
+                        <input type="password" class="form-control" placeholder="Ingresa tu contraseña">
                         <i class="fas fa-lock input-icon"></i>
                     </div>
                 </div>
@@ -210,7 +209,7 @@
                 <button type="submit" class="btn btn-login">Login</button>
 
                 <div class="register-link">
-                    Don't have an account? <a href="{{route('registro')}}">Register</a>
+                    ¿No tienes una cuenta? <a href="{{route('registro')}}">Regístrate</a>
                 </div>
             </form>
         </div>
@@ -258,7 +257,7 @@
                 },
                 move: {
                     enable: true,
-                    speed: 2,
+                    speed: .5,
                     direction: 'bottom',
                     random: false,
                     straight: false,

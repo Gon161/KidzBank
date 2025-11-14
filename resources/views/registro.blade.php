@@ -18,9 +18,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden;
-            height: 100vh;
+            overflow-y: auto;
+            min-height: 100vh;
         }
+
 
         #particles-js {
             position: fixed;
@@ -43,8 +44,7 @@
         }
 
         .login-card {
-            background: rgba(139, 77, 184, 0.25);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(0.5vh);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             padding: 40px 35px;
@@ -178,45 +178,77 @@
 
 <div class="login-container">
     <div class="login-card">
-        <h2 class="login-title">Login</h2>
+        <h2 class="login-title">Registro</h2>
 
-        <form>
+        <form action="" method="POST">
+            @csrf
+
             <div class="mb-3">
-                <label class="form-label">Usuairo:</label>
+                <label class="form-label">Nombre(s):</label>
                 <div class="position-relative">
-                    <input type="text" class="form-control" placeholder="Ingresar Usuario">
+                    <input type="text" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
                     <i class="fas fa-user input-icon"></i>
                 </div>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Contraseña</label>
+                <label class="form-label">Apellido(s):</label>
                 <div class="position-relative">
-                    <input type="password" class="form-control" placeholder="Ingresa Contraseña">
+                    <input type="text" name="apellidos" class="form-control" placeholder="Ingresa tus apellidos" required>
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Usuario:</label>
+                <div class="position-relative">
+                    <input type="text" name="usuario" class="form-control" placeholder="Elige un nombre de usuario" required>
+                    <i class="fas fa-user-circle input-icon"></i>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Correo electrónico:</label>
+                <div class="position-relative">
+                    <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo" required>
+                    <i class="fas fa-envelope input-icon"></i>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contraseña:</label>
+                <div class="position-relative">
+                    <input type="password" name="password" class="form-control" placeholder="Crea una contraseña" required>
                     <i class="fas fa-lock input-icon"></i>
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">
-                        Remember me
-                    </label>
+            <div class="mb-3">
+                <label class="form-label">Confirmar contraseña:</label>
+                <div class="position-relative">
+                    <input type="password" name="password_confirmation" class="form-control" placeholder="Repite tu contraseña" required>
+                    <i class="fas fa-lock input-icon"></i>
                 </div>
-                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
             </div>
 
-            <button type="submit" class="btn btn-login">Login</button>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                    Acepto los términos y condiciones
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-login">Registrarse</button>
 
             <div class="register-link">
-                Don't have an account? <a href="#">Register</a>
+                ¿Ya tienes una cuenta? <a href="{{ route('login') }}">Inicia sesión</a>
             </div>
         </form>
+
     </div>
 </div>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="assets/particles/particles.min.js"></script>
 
 <script>
     // Particles.js Snow Configuration
@@ -258,7 +290,7 @@
             },
             move: {
                 enable: true,
-                speed: 2,
+                speed: .5,
                 direction: 'bottom',
                 random: false,
                 straight: false,
